@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Shadcn Theme Gallery - User Guide
+
+Welcome to the Shadcn Theme Gallery! This website helps you find and use beautiful color themes for your shadcn/ui projects.
 
 ## Getting Started
 
-First, run the development server:
+This gallery provides ready-to-use color schemes that work with shadcn/ui components. Each theme includes both light and dark mode variants.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## How to Use a Theme
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. **Browse Themes**
+   - Look through the available themes in the gallery
+   - Each theme shows color previews for both light and dark modes
+   - Click different themes to see how they look in the preview section
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2. **Test Dark/Light Mode**
+   - Use the mode toggle (sun/moon icon) to preview themes in:
+     - Light mode
+     - Dark mode
+     - System mode (matches your system preferences)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. **Apply a Theme to Your Project**
+   - Find a theme you like
+   - Click the "Copy code" button
+   - A dialog will show the theme's CSS code
+   - Click the copy button in the dialog
+   - Paste the code into your project's `globals.css` file
+   - That's it! The theme will apply to your shadcn/ui components
 
-## Learn More
+## For Projects Using shadcn/ui CLI
 
-To learn more about Next.js, take a look at the following resources:
+If you installed shadcn/ui using the CLI, you already have a `globals.css` file. Simply:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Open your `app/globals.css` or similar CSS file
+2. Find the existing shadcn theme variables (starting with `@layer base`)
+3. Replace them with the new theme code you copied
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## For New Projects
 
-## Deploy on Vercel
+1. Install shadcn/ui following their documentation
+2. Copy the theme code from this gallery
+3. Paste it into your global CSS file
+4. The theme will automatically apply to all shadcn components
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Need Help?
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Make sure you've installed shadcn/ui properly
+- The theme code should be placed in your global CSS file
+- The CSS variables must be at the `:root` level
+- Dark mode requires the `dark` class to be present on your `html` tag
+
+That's all you need to know! Just browse, copy, and paste to give your shadcn/ui project a fresh new look.
